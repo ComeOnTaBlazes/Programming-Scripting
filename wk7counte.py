@@ -6,27 +6,35 @@
 mylines = []
 
 #ask user for filename to be sacnned
-userinput = input("Please enter a file you want to analyze:")
+#userinput = input("Please enter a file you want to analyze:")
 #run a error test on what the user has input, return text if error
 #and re-direct to userinput request
 
 #ask user for what they want to scan the file for
 #countstr = input("Please enter what you would like to count: ")
 
-
+#try/except taken from lecture video
+try:
+    userinput = input("Please enter a file you want to analyze:")
 #open file from userinput as read
-with open (userinput, 'r') as myfile:
+    with open (userinput, 'r') as myfile:
     #for individual line in the file
-    for line in myfile:
+        for line in myfile:
         #make all characters lowercase and create lines
-        lines = line.lower()
+            lines = line.lower()
         #count all occurances of e in lines
-        x = lines.count('e')
+            x = lines.count('e')
         #append number to list
-        mylines.append(x)
-        
+            mylines.append(x)
+        #sum each value in list together
+    print(sum(mylines))
+except:
+    print("An error was returned, please try again")
+#I want to include a while loop in this,
+# maybe while the original list is empty
+
         
 #sum each value in list together
-print(sum(mylines))
+#print(sum(mylines))
    
    
