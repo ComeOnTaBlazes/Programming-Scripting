@@ -29,7 +29,7 @@ try:
         #sum each value in list together
     print(sum(mylines))
 except:
-    print("An error was returned, please try again")
+    print("An error was returned, please ensure the correct filename and extension is used")
 #I want to include a while loop in this,
 # maybe while the original list is empty
 
