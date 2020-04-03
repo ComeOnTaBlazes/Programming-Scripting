@@ -14,26 +14,19 @@ userinput = input("Please enter a file you want to analyze:")
 #countstr = input("Please enter what you would like to count: ")
 
 
-
+#open file from userinput as read
 with open (userinput, 'r') as myfile:
+    #for individual line in the file
     for line in myfile:
-        line.lower()
-        x = line.count('e')
+        #make all characters lowercase and create lines
+        lines = line.lower()
+        #count all occurances of e in lines
+        x = lines.count('e')
+        #append number to list
         mylines.append(x)
-        y = line.count('E')
-        mylines.append(y)
         
-
+        
+#sum each value in list together
 print(sum(mylines))
    
-   # x = myfile.read(letter)
-    #if x = 'e'
-     #       counter += 1
-    #elif x = 'E'
-     #       counter += 1
-    #else letter += 1
-    #end =""
-    
-    
-    #list = [line.strip() for line in myfile]
-    #print(list)
+   
