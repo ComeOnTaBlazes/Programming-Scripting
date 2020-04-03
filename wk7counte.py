@@ -1,22 +1,28 @@
 #James Hannon
 #Input & Output
+#I have not had the time to ge this code working as I would like
 
-#with open ('e.txt', 'r') as f:
- #   data = f.read()
-
-#below copied from: 
-# https://www.computerhope.com/issues/ch001721.html
-
+#create a list
 mylines = []
 
-#count = 0
+#ask user for filename to be sacnned
+userinput = input("Please enter a file you want to analyze:")
+#run a error test on what the user has input, return text if error
+#and re-direct to userinput request
 
-#letter = 0
+#ask user for what they want to scan the file for
+#countstr = input("Please enter what you would like to count: ")
 
-with open ('Dogs.txt', 'r') as myfile:
+
+
+with open (userinput, 'r') as myfile:
     for line in myfile:
+        line.lower()
         x = line.count('e')
         mylines.append(x)
+        y = line.count('E')
+        mylines.append(y)
+        
 
 print(sum(mylines))
    
