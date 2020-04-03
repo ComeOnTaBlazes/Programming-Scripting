@@ -5,5 +5,5 @@ a= input("Enter text:")
 
 #a ="The quick brown fox jumps over the lazy dog."
 
-
+#Found in Whirlwind tour of Python pg.33
 print(a[::-2])
